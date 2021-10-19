@@ -45,11 +45,8 @@ Uncomment line 5-9 if external library is needed.
 \paragraph{upper\_bound}
 \paragraph{next\_permutation}
 \paragraph{prev\_permutation}
-\paragraph{distance}
 \paragraph{partition}
 \paragraph{stable\_partition}
-\paragraph{is\_partitioned}
-\paragraph{partition\_point}
 \paragraph{rotate}
 \paragraph{min}
 \paragraph{max}
@@ -58,7 +55,65 @@ Uncomment line 5-9 if external library is needed.
 \paragraph{\_\_builtin\_popcount}
 
 \section{Algorithms}
-
+\subsection{Fibonacci numbers}
+if $F_n$ is the $n$'th Fibonacci number, where $F_0=0$ and $F_1=1$, then
+$$F_{n+k}=F_kF_{n+1}+F_{k-1}F_n$$
+for any $n,k\in\mathbb{N}$.
+\subsection{Geometric Transformation of points}
+Point $(x,y,z)$ can be transformed by matrix multiplication 
+\begin{equation*}
+\begin{bmatrix}
+x & y & z & 1
+\end{bmatrix}\times\begin{bmatrix}
+a_{11} & a_{12} & a_{13} & a_{14}\\
+a_{21} & a_{22} & a_{23} & a_{24}\\
+a_{31} & a_{32} & a_{33} & a_{34}\\
+a_{41} & a_{42} & a_{43} & a_{44}
+\end{bmatrix}=\begin{bmatrix}
+x' & y' & z' & 1
+\end{bmatrix}
+\end{equation*}
+Where $(x',y',z')$ is our answer. If we call the $4\times4$ matrix as $X$, then for shifting $x$ by $a$ co-ordinate, $y$ by $b$ and $z$ by $c$ co-ordinate,
+\begin{equation*}
+X=\begin{bmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+a & b & c & 1
+\end{bmatrix}
+\end{equation*}
+Instead of shifting, for scaling
+\begin{equation*}
+X=\begin{bmatrix}
+a & 0 & 0 & 0\\
+0 & b & 0 & 0\\
+0 & 0 & c & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\end{equation*}
+And finally, for rotating $\theta$ degrees around the $x$ axis following the right-hand rule (counter-clockwise direction)
+\begin{equation*}
+X=\begin{bmatrix}
+1 & 0 & 0 & 0\\
+0 & \cos\theta & -\sin\theta & 0\\
+0 & \sin\theta & \cos\theta & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\end{equation*}
+For $2$D rotation of $(x,y)$ by $\theta$ degree counterclockwise,
+\begin{equation*}
+\begin{bmatrix}
+x & y
+\end{bmatrix}\times\begin{bmatrix}
+\cos\theta & \sin\theta \\
+-\sin\theta & \cos\theta
+\end{bmatrix}=\begin{bmatrix}
+x' & y'
+\end{bmatrix}
+\end{equation*}
+Where $(x',y')$ is our answer.
 \section{Useful Results}
+\subsection{Finding directed path with fixed length}
+Create the adjacency matrix and raise it's power to $k$, cell $(u,v)$ will give the number of distinct path with length $k$ connecting vertex $u$ and $v$ (direction from $u$ to $v$).
 
 \end{document}
