@@ -54,11 +54,14 @@ Uncomment line 5-9 if external library is needed.
 \paragraph{\_\_gcd}
 \paragraph{\_\_builtin\_popcount}
 
+
 \section{Algorithms}
+
 \subsection{Fibonacci numbers}
 if $F_n$ is the $n$'th Fibonacci number, where $F_0=0$ and $F_1=1$, then
 $$F_{n+k}=F_kF_{n+1}+F_{k-1}F_n$$
 for any $n,k\in\mathbb{N}$.
+
 \subsection{Geometric Transformation of points}
 Point $(x,y,z)$ can be transformed by matrix multiplication 
 \begin{equation*}
@@ -112,11 +115,27 @@ x' & y'
 \end{bmatrix}
 \end{equation*}
 Where $(x',y')$ is our answer.
+
 \subsection{Extended Euclidean Algorithm}
 Returns the $\gcd$ of $a$ and $b$ with $ax+by=\gcd(a,b)$.
 \lstinputlisting[language=C++]{src/extended_euclidean_algorithm.cpp}
+
+\subsection{Binary Search} 
+Returns the index of $x$ in array $a$.
+\lstinputlisting[language=C++]{src/binary_search.cpp}
+
+\subsection{Processing All Subset}
+Processes subset of array $a$. Initially $k=0$ and $s$ empty.
+\lstinputlisting[language=C++]{src/all_subset.cpp}
+
+\subsection{Processing All Permutation}
+Processes all permutation of array $a$, all element should be distinct. $bm$ is an boolean array with length $n$, initially all element is $false$.
+\lstinputlisting[language=C++]{src/all_permutation.cpp}
+
 \section{Useful Results}
+
 \subsection{Finding directed path with fixed length}
 Create the adjacency matrix and raise it's power to $k$, cell $(u,v)$ will give the number of distinct path with length $k$ connecting vertex $u$ and $v$ (direction from $u$ to $v$).
+
 
 \end{document}
