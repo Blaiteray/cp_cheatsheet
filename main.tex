@@ -112,6 +112,9 @@ x' & y'
 \end{bmatrix}
 \end{equation*}
 Where $(x',y')$ is our answer.
+\subsection{Extended Euclidean Algorithm}
+Returns the $\gcd$ of $a$ and $b$ with $ax+by=\gcd(a,b)$.
+\lstinputlisting[language=C++]{src/extended_euclidean_algorithm.cpp}
 \section{Useful Results}
 \subsection{Finding directed path with fixed length}
 Create the adjacency matrix and raise it's power to $k$, cell $(u,v)$ will give the number of distinct path with length $k$ connecting vertex $u$ and $v$ (direction from $u$ to $v$).
