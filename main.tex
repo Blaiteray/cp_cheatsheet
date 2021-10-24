@@ -134,6 +134,11 @@ Processes all permutation of array $a$, all element should be distinct. $bm$ is 
 
 \section{Useful Results}
 
+\subsection{matrix}
+The element $val$ of this struct contains the value of the elements of the matrix, where $val[i][j]$ represents the value in $i$'th row and $j$'th column.
+\lstinputlisting[language=C++]{src/matrix.cpp}
+
+
 \subsection{Finding directed path with fixed length}
 Create the adjacency matrix and raise it's power to $k$, cell $(u,v)$ will give the number of distinct path with length $k$ connecting vertex $u$ and $v$ (direction from $u$ to $v$).
 
