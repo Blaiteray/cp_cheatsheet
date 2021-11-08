@@ -158,5 +158,9 @@ The element $val$ of this struct contains the value of the elements of the matri
 \subsection{Finding directed path with fixed length}
 Create the adjacency matrix and raise it's power to $k$, cell $(u,v)$ will give the number of distinct path with length $k$ connecting vertex $u$ and $v$ (direction from $u$ to $v$).
 
+\subsection{Gray Code}
+Gray code is a binary numeral system where two successive values differ in only one bit. \\For example, the sequence of Gray codes for $3$-bit numbers is: $000, 001, 011, 010, 110, 111, 101, 100$, so $G(4)=6$. Function for finding $n$'th gray code:
+\lstinputlisting[language=C++]{src/gray_code.cpp}
+
 
 \end{document}
