@@ -148,6 +148,10 @@ Runs BFS on a graph with adjacency matrix $e$, starting point $s$, vertex number
 Finds modular multiplicative inverse from $1$ to $n$ inclusive mod $m$.
 \lstinputlisting[language=C++]{src/mod_inverse.cpp}
 
+\subsection{Fast Fourier Transformation}
+For finding polynomial values at roots of unity for polynomial with co-efficient $a$, set $invert=false$, for finding co-efficient form roots of unity, set $invert=true$. Size of $a$ has to be $2^k$ for some $k\in\mathbb{N}$. See \href{https://cp-algorithms.com/algebra/fft.html}{here} for more details.
+\lstinputlisting[language=C++]{src/fft.cpp}
+
 \section{Useful Results}
 
 \subsection{matrix}
